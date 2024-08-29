@@ -15,3 +15,5 @@ print("Number of neurons: ", neuron_count)
 print("Threshold voltage: ", threshold_voltage, "mV")
 print("Is the neuron excited? ", is_excited)
 print("Type of neuron : ", neuron_type)
+
+
