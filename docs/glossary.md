@@ -1,3 +1,5 @@
+glossary.md
+
 resting_potential(휴지 전위)
 뉴런이 자극을 받지 않은 평상시의 전기적 상태를 말한다.
 보통 -70mV 정도이며, mV는 밀리볼트를 의미한다.
@@ -16,5 +18,5 @@ action_potential(활동 전위)
 neuron_state(뉴런 상태)
 현재 뉴런의 상태를 문자열로 표현
 "rest"는 뉴런이 휴지 상태임을 의미.
-
-
+"firing"은 뉴런이 활동 전위를 발생시키는 상태를 의미.
+"hyperpolarized"는 뉴런의 전위가 휴지 전위보다 낮아진 상태를 의미.
