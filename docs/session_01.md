@@ -1,21 +1,30 @@
+# 세션 1: 뉴런 기초와 시뮬레이션
 
-resting_potential(휴지 전위)
-뉴런이 자극을 받지 않은 평상시의 전기적 상태를 말한다.
-보통 -70mV 정도이며, mV는 밀리볼트를 의미한다.
-이 상태에서 뉴런은 정보를 전달하지 않고 '쉬고 있는 상태'이다.
+## 뉴런 기초 (session_01_neuron_basics.py)
 
-threshold_potential(역치 전위)
-뉴런이 활동 전위를 발생시키기 위해 도달해야 하는 최소한의 전위를 말한다.
--55mV정도
-뉴런의 전위가 이 값을 넘으면 활동 전위가 발생한다.
+1. 상수랑 변수 정의함
+   - NEURON_COUNT, THRESHOLD_VOLTAGE, RESTING_POTENTIAL 같은 거
+   - is_excited, neuron_type 이런 변수들
 
-action_potential(활동 전위)
-뉴런이 정보를 전달할 때 발생하는 급격한 전위 변화.
-+40mV까지
-이때 뉴런이 발화(Fire)했다고 표현.
+2. 뉴런 상태 결정하는 함수 만듦
+   - membrane_potential 받아서 "excited", "hyperpolarized", "rest" 중 하나 리턴
 
-neuron_state(뉴런 상태)
-현재 뉴런의 상태를 문자열로 표현
-"rest"는 뉴런이 휴지 상태임을 의미.
-"firing"은 뉴런이 활동 전위를 발생시키는 상태를 의미.
-"hyperpolarized"는 뉴런의 전위가 휴지 전위보다 낮아진 상태를 의미.
+3. 뉴런 상태 테스트함
+   - 초기 상태랑 전위 변경 후 상태 출력해봄
+
+4. 시간에 따른 뉴런 상태 변화 시뮬레이션
+   - random 모듈 써서 임의의 전위 생성하고 상태 출력
+
+## 뉴런 시뮬레이션 (session_01_neuron_simulation.py)
+
+1. 상수 정의함
+   - RESTING_POTENTIAL, THRESHOLD_POTENTIAL, ACTION_POTENTIAL
+
+2. simulate_neuron 함수 만듦
+   - 랜덤한 자극 주고 뉴런 상태 결정
+   - 발화하면 활동 전위 발생시키고 휴지 전위로 복귀
+
+3. 시뮬레이션 실행하고 결과 출력
+   - 20번 반복해서 각 단계마다 전위랑 상태 보여줌
+
+이렇게 뉴런의 기본적인 동작이랑 상태 변화를 코드로 구현해봄.
